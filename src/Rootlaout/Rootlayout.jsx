@@ -8,7 +8,7 @@ function Rootlayout() {
     <>
       <Header />
       <Toaster />
-      
+
       <Outlet />
     </>
   );
