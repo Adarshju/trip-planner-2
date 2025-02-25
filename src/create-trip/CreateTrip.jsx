@@ -58,6 +58,32 @@ function CreateTrip() {
       });
   
       geocoderRef.current.appendChild(geocoder.onAdd());
+       const input = geocoderRef.current.querySelector(
+        ".mapboxgl-ctrl-geocoder--input"
+      );
+    const clearButton = geocoderRef.current.querySelector(".mapboxgl-ctrl-geocoder--clear");
+
+      const searchIcon = geocoderRef.current.querySelector(
+        ".mapboxgl-ctrl-geocoder--icon"
+      );
+
+      if (input) {
+        input.classList.add(
+          "p-3",
+          "w-full",
+          "border-2",
+          "border-blue-500",
+          "rounded-lg",
+          "focus:border-blue-700",
+          "focus:shadow-md"
+        );
+      }
+          if (searchIcon) {
+      searchIcon.style.display = "none";
+    }
+       if (clearButton) {
+      clearButton.style.display = "none";
+    }
     }
   }, [formData]);
   
